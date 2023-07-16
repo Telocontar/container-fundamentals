@@ -130,3 +130,6 @@ dmypy.json
 
 harbor.yml
 harbor-online-installer-v2.8.2.tgz
+
+# directory for inspecting docker container
+docker_container/*
