@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.licenses=APACHE2
 # ensure your Dockerfile installs the latest package versions with no further coding or manual intervention + clean up the apt cache by removing /var/lib/apt/lists
 RUN apk update && apk add \
     nginx \
-&& rm -rf /var/lib/apt/lists/*
+&& rm -rf /var/cache/apk/*
 
 COPY config/nginx.conf /etc/nginx/
 COPY web_content/ /var/www
